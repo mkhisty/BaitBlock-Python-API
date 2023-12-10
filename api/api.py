@@ -21,7 +21,7 @@ model.add(LSTM(32, activation='sigmoid' ))
 model.add(Dense(1, activation='sigmoid'))
 model.compile(loss=['binary_crossentropy'] , optimizer='adam', metrics=['accuracy',tf.keras.metrics.Precision(),tf.keras.metrics.Recall()])
 model.summary()
-model.load_weights('LSTM Phishing Email.h5')
+model.load_weights('LSTM.h5')
 with open('tokenizer3.json') as f:
     data = json.load(f)
     tok = tf.keras.preprocessing.text.tokenizer_from_json(data)
